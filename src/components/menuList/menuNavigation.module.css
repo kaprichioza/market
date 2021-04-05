@@ -1,0 +1,37 @@
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    display: flex;
+}
+.list {
+    display: flex;
+    list-style: none;
+}
+.item {
+    color: #808d9a;
+    text-transform: uppercase;
+    padding-right: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 0.68px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: Bold;
+}
+.item:last-child {
+    padding-right: 0;
+}
+.item:hover {
+    color: #001a34;
+}
+.active {
+    color: #001a34;
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        display: none;
+    }
+}

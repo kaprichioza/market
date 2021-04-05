@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 44px;
+    margin: auto;    
+    max-width: 1024px;
+}
+.user-navigation-link {
+    display: flex;    
+}
