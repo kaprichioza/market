@@ -9,3 +9,8 @@
 .user-navigation-link {
     display: flex;    
 }
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 18px 16px 10px;
+    }
+}
