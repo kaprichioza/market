@@ -1,14 +1,25 @@
 import styles from './cardProduct.module.css';
-import React from 'react'
+import React, { useState } from 'react'
 import { ProductLogo } from '../productLogo/productLogo';
 import { Price } from '../price/price';
 import { DescriptionCardItem } from '../descriptionCardItem/descriptionCardItem';
 import { Rating } from '../rating/rating';
+import cn from 'classnames';
+import { addToCart } from '../../services/cartApi';
 
-export const CardProduct = (props) => {    
+export const CardProduct = (props) => {
     const { productData: {
-        preview, price, discount, rating, comments, description
+        preview, price, discount, rating, comments, description, id
     } } = props;
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+    async function add() {
+        try {
+            await addToCart(id);
+            setIsButtonDisabled(true);
+        } catch (e) {
+            console.error(e)        
+        }
+    }
     return (
         <div className={`${discount ? 'is-sale ' : ''}${styles['card-product']}`}>
             <div className={styles['logo-container']}>
@@ -19,7 +30,7 @@ export const CardProduct = (props) => {
                 <Price price={price} discount={discount} />
                 <DescriptionCardItem text={description} />
                 <Rating rating={rating} comments={comments} />
-                <button className={styles['button-add-to-card']}>В корзину</button>
+                <button onClick={add} className={cn(isButtonDisabled && 'is-disabled', styles['button-add-to-card'])}>В корзину</button>
             </div>
         </div>
     )
