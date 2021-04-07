@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './basketPage.module.css';
 import { Title } from '../title/title'
 import { OrderDetails } from '../orderDetails/orderDetails';
+import { Summary } from '../summary/summary';
 
 export const BasketPage = () => {
     const cartItems = [{
@@ -15,10 +16,12 @@ export const BasketPage = () => {
         "price": 7321,
         "description": "Cтул Lars желтый пластик Ш.48 В.83 Г.56 Вес 5.5кг"
     }];
+    const sum = cartItems.reduce((accum, currentItem) => accum + currentItem.price, 0);
     return (
         <div>
             <Title title='Корзина' description='2 товара' />
-            <OrderDetails cartItems={cartItems}/>
+            <OrderDetails cartItems={cartItems} />
+            <Summary quantity={cartItems.length} sum={sum} />
         </div>
     )
 }

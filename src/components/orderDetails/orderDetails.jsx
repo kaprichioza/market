@@ -8,13 +8,13 @@ export const OrderDetails = (props) => {
     const { cartItems } = props;
     return (
         <section className={styles.wrapper}>
-            <table className={styles.table} cellspacing="0" cellpadding="0">
+            <table className={styles.table} cellSpacing="0" cellPadding="0">
                 <thead>
                     <tr className={styles['table-head']}>
                         <th align="left">
                             <input type="checkbox"></input>
                         </th>
-                        <th align='left' colspan="2">
+                        <th align='left' colSpan="2">
                             <button className={styles['select-all-button']}>Выбрать все</button>
                         </th>
                         <th align='right'>
@@ -24,7 +24,7 @@ export const OrderDetails = (props) => {
                 </thead>
                 <tbody className={styles.tbody}>
                     {cartItems.map(({ id, preview, price, description }) => (
-                        <tr>
+                        <tr key={id}>
                             <td>
                                 <input type="checkbox"></input>
                             </td>
