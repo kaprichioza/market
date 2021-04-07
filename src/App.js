@@ -9,7 +9,7 @@ import { guid } from './utils/guid';
 export const cookieName = 'sessionToken';
 
 function App() {
-  const [cartData, setCartData] = useState([]);  
+  const [cartData, setCartData] = useState(null);
   useEffect(() => {
     const cookieRegExp = new RegExp(cookieName);
     if (!cookieRegExp.test(document.cookie)) {
@@ -18,19 +18,18 @@ function App() {
     }
     (async function fetchCart() {
       const response = await getCart();
-      console.log(response);
       setCartData(response.data);
     })();
   }, []);
   return (
     <Router>
-      <Header cartItemCount={cartData.length}/>
+      <Header cartItemCount={cartData && cartData.length}/>
       <Switch>
         <Route exact path="/">
           <CatalogPage />
         </Route>
         <Route path="/basket">
-          <BasketPage />
+          <BasketPage cartData={cartData} />
         </Route>
       </Switch>
     </Router>

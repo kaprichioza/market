@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { CatalogContent } from '../catalogContent/catalogContent';
 import { Title } from '../title/title';
 import axios from 'axios';
-import styles from './catalogPage.module.css';
 import { pluralize } from '../../utils/pluralize';
-
+import { Loader } from '../loader/loader';
+import { getCatalog } from '../../services/cartApi';
 
 export const CatalogPage = () => {
     const [isLoading, setIsLoading] = useState(true)
@@ -14,19 +14,19 @@ export const CatalogPage = () => {
     useEffect(() => {
         (async function fetchProducts() {
             try {
-                const response = await axios.get('/api/v1/products');
+                const response = await getCatalog();
                 setCatalogData(response.data);
-            } catch(e) {
+            } catch (e) {
                 console.error(e)
                 // TODO: show toast notification
             } finally {
-                setIsLoading(false);                
-            }            
+                setIsLoading(false);
+            }
         })();
     }, []);
     return (
         <>{isLoading
-            ? <div className={styles['loading-spiner']}></div>
+            ? <Loader />
             : <>
                 <Title title='Дом и сад' description={descriptionText} />
                 <CatalogContent catalogData={catalogData} />

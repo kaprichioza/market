@@ -20,6 +20,11 @@ app.get('/api/v1/cart/get', function (req, res) {
     const cartItems = db.get(`cart[${token}]`).value();
     return res.json(cartItems);
 });
+app.get('/api/v1/cart/get-product', function (req, res) {
+    const productId = req.query.productId - 1;    
+    const productData = db.get(`products.[${productId}]`).value()        
+    return res.json(productData);
+})
 app.post('/api/v1/cart/add', function (req, res) {
     const productId = req.query.productId;
     const token = req.cookies && req.cookies.sessionToken;
