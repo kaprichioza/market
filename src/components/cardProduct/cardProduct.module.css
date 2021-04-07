@@ -30,47 +30,7 @@
     flex-direction: column;
     width: 216px;
 }
-.button-add-to-card {
-    color: #fff;
-    background-color: #005bff;
-    border-radius: 3px;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: center;
-    padding: 7px 12px;
+.button-container {
     width: 100px;
-    cursor: pointer;
-    border: none;
     margin: 16px 0 24px;
-}
-.button-add-to-card:focus {
-    outline: none;
-}
-
-.button-add-to-card { 
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-.button-add-to-card:after {
-    left: 0;
-}
-
-.button-add-to-card:after {
-    content: "";
-    background: #fff;
-    display: block;
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -5%;
-    border-radius: 50px;
-    margin-left: -30%;
-    opacity: 0;
-    transition: all 0.75s ease-in-out;
-}
-.button-add-to-card:active:after {
-    width: 0px;
-    opacity: 1;
-    transition: 0s;
 }

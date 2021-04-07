@@ -43,19 +43,9 @@
 .order-description {
     flex-basis: 50%;
 }
-.order-button {
-    background: #005bff;
-    border-radius: 3px;
-    font-size: 16px;
-    line-height: 20px;
-    color: #ffffff;
-    flex-basis: 40%;
+.button-container {
     height: 48px;
-    border: none;
-    cursor: pointer;
-}
-.order-button:focus {
-    outline: none;
+    flex-basis: 40%;
 }
 @media screen and (max-width: 768px) {
     .wrapper {
@@ -80,9 +70,5 @@
     .total-sum-row {
         padding-top: 10px;
         padding-bottom: 20px;
-    }    
-    .order-button {
-        font-size: 14px;
-        height: 40px;
-    }
+    }        
 }

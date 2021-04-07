@@ -4,8 +4,8 @@ import { ProductLogo } from '../productLogo/productLogo';
 import { Price } from '../price/price';
 import { DescriptionCardItem } from '../descriptionCardItem/descriptionCardItem';
 import { Rating } from '../rating/rating';
-import cn from 'classnames';
 import { addToCart } from '../../services/cartApi';
+import { Button } from '../button/button';
 
 export const CardProduct = (props) => {
     const { productData: {
@@ -17,7 +17,7 @@ export const CardProduct = (props) => {
             await addToCart(id);
             setIsButtonDisabled(true);
         } catch (e) {
-            console.error(e)        
+            console.error(e)
         }
     }
     return (
@@ -30,7 +30,9 @@ export const CardProduct = (props) => {
                 <Price price={price} discount={discount} />
                 <DescriptionCardItem text={description} />
                 <Rating rating={rating} comments={comments} />
-                <button onClick={add} className={cn(isButtonDisabled && 'is-disabled', styles['button-add-to-card'])}>В корзину</button>
+                <div className={styles['button-container']}>
+                    <Button disabled={isButtonDisabled} buttonText='В корзину' type='add-to-card' />
+                </div>
             </div>
         </div>
     )

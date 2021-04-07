@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '../button/button';
 import { Price } from '../price/price';
 import styles from './summary.module.css';
 
@@ -29,7 +30,9 @@ export const Summary = (props) => {
                 </div>
                 <div className={styles['order-row']}>
                     <span className={styles['order-description']}>Доступные способы и время доставки можно выбрать при оформлении заказа</span>
-                    <button className={styles['order-button']}>Оформить</button>
+                    <div className={styles['button-container']}>
+                        <Button buttonText='Оформить' type='order' />
+                    </div>
                 </div>
             </div>
         </section>
