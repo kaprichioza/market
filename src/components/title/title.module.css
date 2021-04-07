@@ -19,7 +19,7 @@
 }
 @media screen and (max-width: 768px) {
     .wrapper {
-        padding: 10px 16px;
+        padding: 66px 16px 10px;
     }
     .headline {
         color: #001a34;
