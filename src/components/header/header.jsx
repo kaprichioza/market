@@ -6,14 +6,16 @@ import styles from './header.module.css';
 
 export const Header = () => {
     return (
-        <div className={styles.wrapper}>
-            <a href="/" className={styles.logo}>
-                <img src="logo.png" alt="ozon logo"></img>
-            </a>
-            <MenuNavigation />
-            <div className={styles['user-navigation-link']}>
-                <UserAuth />
-                <Basket />
+        <div className={styles.container}>
+            <div className={styles.wrapper}>
+                <a href="/" className={styles.logo}>
+                    <img src="logo.png" alt="ozon logo"></img>
+                </a>
+                <MenuNavigation />
+                <div className={styles['user-navigation-link']}>
+                    <UserAuth />
+                    <Basket />
+                </div>
             </div>
         </div>
     )

@@ -9,7 +9,6 @@ export const CardProduct = (props) => {
     const { productData: {
         preview, price, discount, rating, comments, description
     } } = props;
-    console.log(preview, price, discount, rating, comments, description);
     return (
         <div className={`${discount ? 'is-sale ' : ''}${styles['card-product']}`}>
             <div className={styles['logo-container']}>

@@ -1,10 +1,19 @@
+.container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 10px 1px rgb(0 0 0 / 10%);
+    box-shadow: 0px 1px 10px 1px rgb(0 0 0 / 10%)
+}
 .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 44px;
     margin: auto;    
-    max-width: 936px;
+    max-width: 936px;    
 }
 .user-navigation-link {
     display: flex;    

@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     max-width: 936px;
-    padding: 20px 44px;
+    padding: 84px 44px 20px;
     margin: auto;
     align-items: center;
 }
