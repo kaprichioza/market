@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from './title.module.css';
 
-export const Title = () => {
+export const Title = (props) => {
+    const { title, description } = props
     return (
         <section className={styles.wrapper}>
-            <span className={styles.headline}>Дом и сад
-                <span className={styles.quantityItems}>
-                    24 товара
-                </span>
+            <span className={styles.headline}>{title}
+                <span className={styles.quantityItems}>{description}</span>
             </span>
         </section>
     )
