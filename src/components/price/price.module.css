@@ -1,0 +1,19 @@
+.price-wrap {
+    display: flex;
+    align-items: center;
+}
+.product-price {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #001a34;
+    padding-right: 5px;
+    letter-spacing: -1px;
+}
+.old-price {
+    display: none;
+    text-decoration-color: #f91155;
+    font-size: 12px;
+    line-height: 16px;
+    color: #001a34;
+}

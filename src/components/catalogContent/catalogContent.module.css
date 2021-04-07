@@ -1,0 +1,10 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+    row-gap: 16px;
+    column-gap: 24px;
+    max-width: 936px;
+    padding: 16px 44px;
+    margin: auto;
+}
+

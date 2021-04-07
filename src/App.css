@@ -28,6 +28,24 @@
   color: #61dafb;
 }
 
+.is-sale [class*="discount-value"] {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  background-color: #f91155;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+  padding: 3px 6px;
+}
+.is-sale [class*="price_old-price"] {
+  display: block;
+}
+.is-sale [class*="product-price"] {
+  color: #F91155;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
