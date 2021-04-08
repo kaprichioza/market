@@ -10,4 +10,8 @@
     line-height: 18px;
     color: #808d9a;
     text-decoration: none;
+    transition: 0.5s;
+}
+.comments:hover {
+    color: #000;
 }

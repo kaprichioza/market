@@ -13,6 +13,9 @@
     font-weight: bold;
     transition: 0.75s;
 }
+.button:hover {
+    background-color: #004ed6;
+}
 .button:focus {
     outline: none;
 }

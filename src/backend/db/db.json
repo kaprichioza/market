@@ -50,7 +50,7 @@
       "preview": "product-img5.png",
       "price": 7321,
       "discount": 17,
-      "rating": 5,
+      "rating": 4.3,
       "comments": "123k",
       "description": "Cтул Lars желтый пластик Ш.48 В.83 Г.56 Вес 5.5кг"
     },
@@ -59,7 +59,7 @@
       "preview": "product-img6.png",
       "price": 7321,
       "discount": 0,
-      "rating": 5,
+      "rating": 1.5,
       "comments": "123k",
       "description": "Cтул Lars желтый пластик Ш.48 В.83 Г.56 Вес 5.5кг"
     },
@@ -104,7 +104,7 @@
       "preview": "product-img3.png",
       "price": 7321,
       "discount": 0,
-      "rating": 5,
+      "rating": 4.8,
       "comments": "123k",
       "description": "Cтул Lars желтый пластик Ш.48 В.83 Г.56 Вес 5.5кг"
     },
@@ -148,7 +148,9 @@
   "cart": {
     "9ac6751d-7dff-4373-a508-6d7d625ef9ab": [
       "3",
-      "4"
+      "4",
+      "2",
+      "15"
     ]
   }
 }
