@@ -23,7 +23,7 @@ export const BasketPage = (props) => {
     useEffect(() => {
         (async function fetchProducts() {
             try {   
-                if (cartData.length < 1) return;                           
+                if (cartData && cartData.length < 1) return;                           
                 const response = await getCatalog(cartData);  
                 const cartItems = response.data.map((item) => ({ ...item, isSelected: true }));
                 setBasketData(cartItems);    
@@ -36,14 +36,15 @@ export const BasketPage = (props) => {
             }
         })()   
     }, [cartData])
-    const sum = basketData && basketData.reduce((accum, currentItem) => accum + currentItem.price, 0);
+    const selectedItems = basketData.filter(item => item.isSelected);
+    const sum = selectedItems.reduce((accum, currentItem) => accum + currentItem.price, 0);
     return (
         <>{isLoading
             ? <Loader />
             : <>
                 <Title title='Корзина' description={cartData && cartData.length} />
                 <OrderDetails onRemoveFromCart={props.onRemoveFromCart} onToggleAll={onToggleAll} onCartItemToggle={onCartItemToggle} cartItems={basketData} />
-                <Summary quantity={basketData && basketData.length} sum={sum} />
+                <Summary quantity={selectedItems.length} sum={sum} />
             </>}
         </>
     )
