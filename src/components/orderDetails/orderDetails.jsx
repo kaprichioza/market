@@ -4,9 +4,10 @@ import { Price } from '../price/price';
 import styles from './orderDetails.module.css';
 
 export const OrderDetails = (props) => {
-    const { cartItems, onCartItemToggle, onToggleAll } = props;
+    const { cartItems, onCartItemToggle, onToggleAll, onRemoveFromCart } = props;
     const cartItemCount = cartItems.length;
-    const isSelectAllChecks = cartItemCount > 0 && cartItemCount === cartItems.filter(item => item.isSelected).length;
+    const selectedItems = cartItems.filter(item => item.isSelected).map(item => item.id);
+    const isSelectAllChecks = cartItemCount > 0 && cartItemCount === selectedItems.length;
     return (
         <section className={styles.wrapper}>
             <table className={styles.table} cellSpacing="0" cellPadding="0">
@@ -19,7 +20,7 @@ export const OrderDetails = (props) => {
                             <button className={styles['select-all-button']}>Выбрать все</button>
                         </th>
                         <th align='right'>
-                            <button className={styles['remove-button']}>Удалить выбранные</button>
+                            <button onClick={() => {onRemoveFromCart(selectedItems)}} className={styles['remove-button']}>Удалить выбранные</button>
                         </th>
                     </tr>
                 </thead>

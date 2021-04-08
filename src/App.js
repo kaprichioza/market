@@ -4,7 +4,7 @@ import "./App.css";
 import { BasketPage } from './components/basketPage/basketPage';
 import { CatalogPage } from './components/catalogPage/catalogPage';
 import { Header } from "./components/header/header";
-import { addToCart, getCart } from './services/cartApi';
+import { addToCart, getCart, removeFromCart } from './services/cartApi';
 import { guid } from './utils/guid';
 export const cookieName = 'sessionToken';
 export const CartContext = React.createContext([]);
@@ -24,22 +24,30 @@ function App() {
   }, []);
   async function onAddToCart(id) {
     try {
-        const responseCartItems = await addToCart(id);  
-        setCartData(responseCartItems.data);
+      const responseCartItems = await addToCart(id);
+      setCartData(responseCartItems.data);
     } catch (e) {
-        console.error(e)
+      console.error(e)
     }
-}
+  }
+  async function onRemoveFromCart(ids) {
+    try {
+      const responseCartItems = await removeFromCart(ids);
+      setCartData(responseCartItems.data);
+    } catch (e) {
+      console.error(e)
+    }
+  }
   return (
     <CartContext.Provider value={cartData} >
       <Router>
         <Header />
         <Switch>
           <Route exact path="/">
-            <CatalogPage onAddToCart={onAddToCart}/>
+            <CatalogPage onAddToCart={onAddToCart} />
           </Route>
           <Route path="/basket">
-            <BasketPage />
+            <BasketPage onRemoveFromCart={onRemoveFromCart}/>
           </Route>
         </Switch>
       </Router>
