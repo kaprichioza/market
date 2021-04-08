@@ -5,9 +5,6 @@ export function addToCart(id) {
 export function getCart() {
     return axios.get('/api/v1/cart/get');
 }
-export function getCatalog() {
-    return axios.get('/api/v1/products');
-}
-export function getProductData(id) {
-    return axios.get(`/api/v1/cart/get-product?productId=${id}`);
+export function getCatalog(ids) {
+    return axios.get(`/api/v1/products?ids=${ids && ids.join(',')}`);
 }
