@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './basket.module.css';
 import cn from 'classnames';
+import { CartContext } from '../../App';
 
-export const Basket = (props) => {
-    const {cartItemCount} = props; 
+export const Basket = () => { 
+    const cartItems = useContext(CartContext) 
+    const cartItemCount = cartItems && cartItems.length;
     const cartStatus = (cartItemCount < 1);
     return (
         <a href="/basket" className={styles.link}>

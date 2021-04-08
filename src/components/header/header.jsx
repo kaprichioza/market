@@ -4,8 +4,7 @@ import { MenuNavigation } from '../menuList/menuNavigation';
 import { UserAuth } from '../userAuth/userAuth';
 import styles from './header.module.css';
 
-export const Header = (props) => {
-    const { cartItemCount } = props;
+export const Header = () => {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
@@ -15,7 +14,7 @@ export const Header = (props) => {
                 <MenuNavigation />
                 <div className={styles['user-navigation-link']}>
                     <UserAuth />
-                    <Basket cartItemCount={cartItemCount}/>
+                    <Basket />
                 </div>
             </div>
         </div>

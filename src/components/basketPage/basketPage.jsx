@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './basketPage.module.css';
 import { Title } from '../title/title'
 import { OrderDetails } from '../orderDetails/orderDetails';
 import { Summary } from '../summary/summary';
 import { Loader } from '../loader/loader';
 import { getProductData } from '../../services/cartApi';
+import { CartContext } from '../../App';
+
 
 export const BasketPage = (props) => {
     const [basketData, setBasketData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const { cartData } = props;    
+    const cartData  =  useContext(CartContext);
     useEffect(() => {
         (async function fetchProducts() {
             try {

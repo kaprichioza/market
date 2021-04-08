@@ -4,9 +4,9 @@ import { Title } from '../title/title';
 import axios from 'axios';
 import { pluralize } from '../../utils/pluralize';
 import { Loader } from '../loader/loader';
-import { getCatalog } from '../../services/cartApi';
+import { addToCart, getCatalog } from '../../services/cartApi';
 
-export const CatalogPage = () => {
+export const CatalogPage = (props) => {    
     const [isLoading, setIsLoading] = useState(true)
     const [catalogData, setCatalogData] = useState([]);
     const quantityItems = catalogData.length;
@@ -29,7 +29,7 @@ export const CatalogPage = () => {
             ? <Loader />
             : <>
                 <Title title='Дом и сад' description={descriptionText} />
-                <CatalogContent catalogData={catalogData} />
+                <CatalogContent onAddToCart={props.onAddToCart} catalogData={catalogData} />
             </>
         }
         </>

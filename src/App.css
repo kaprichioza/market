@@ -44,7 +44,14 @@
   display: block;
 }
 .is-sale [class*="product-price"] {
-  color: #F91155;
+  color: #f91155;
+}
+.is-disabled {
+  background-color: #f2f3f5 !important;
+  color: #005bff !important;
+}
+[disabled] {
+  cursor: default !important;
 }
 @keyframes App-logo-spin {
   from {

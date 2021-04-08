@@ -1,25 +1,19 @@
 import styles from './cardProduct.module.css';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { ProductLogo } from '../productLogo/productLogo';
 import { Price } from '../price/price';
 import { DescriptionCardItem } from '../descriptionCardItem/descriptionCardItem';
 import { Rating } from '../rating/rating';
 import { addToCart } from '../../services/cartApi';
 import { Button } from '../button/button';
+import { CartContext } from '../../App';
 
 export const CardProduct = (props) => {
     const { productData: {
-        preview, price, discount, rating, comments, description, id
-    } } = props;
-    const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-    async function add() {
-        try {
-            await addToCart(id);
-            setIsButtonDisabled(true);
-        } catch (e) {
-            console.error(e)
-        }
-    }
+        preview, price, discount, rating, comments, description, id,
+    }, onAddToCart } = props;
+    const cart = useContext(CartContext);    
+    const isButtonDisabled = cart && cart.some((cartItem) => cartItem === String(id));
     return (
         <div className={`${discount ? 'is-sale ' : ''}${styles['card-product']}`}>
             <div className={styles['logo-container']}>
@@ -31,7 +25,7 @@ export const CardProduct = (props) => {
                 <DescriptionCardItem text={description} />
                 <Rating rating={rating} comments={comments} />
                 <div className={styles['button-container']}>
-                    <Button disabled={isButtonDisabled} buttonText='В корзину' type='add-to-card' />
+                    <Button action={() => onAddToCart(id)} disabled={isButtonDisabled} buttonText='В корзину' type='add-to-card' />
                 </div>
             </div>
         </div>
