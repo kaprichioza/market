@@ -4,7 +4,7 @@ export const starsTemplate = (index, rating) => {
     else if (rating < index && (rating + 1 - index) > 0) {
         width = (rating + 1 - index) * 100;
     }
-    return (<span style={{
+    return (<span key={index} style={{
         display: 'inline - flex',
         position: 'relative',
         fontSize: 1.5 + 'rem',

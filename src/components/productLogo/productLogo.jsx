@@ -5,7 +5,7 @@ export const ProductLogo = (props) => {
     const { imageHref } = props;    
     return (
         <figure className={styles['img-container']}>
-            <img className={styles.image} src={imageHref} alt="product image"></img>
+            <img className={styles.image} src={imageHref} alt="product"></img>
         </figure>
     )
 }

@@ -1,13 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
-import styles from './basketPage.module.css';
-import { Title } from '../title/title'
+import React, { useContext, useEffect, useState } from 'react';
+import { Title } from '../title/title';
 import { OrderDetails } from '../orderDetails/orderDetails';
 import { Summary } from '../summary/summary';
 import { Loader } from '../loader/loader';
 import { getCatalog } from '../../services/cartApi';
 import { CartContext } from '../../App';
 import { pluralize } from '../../utils/pluralize';
-
 
 export const BasketPage = (props) => {
     const [basketData, setBasketData] = useState([]);

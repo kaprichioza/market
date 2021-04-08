@@ -7,14 +7,10 @@ export const Rating = (props) => {
     return (
         <div className={styles.wrapper}>
             <span className={styles.rating}>
-                {starsTemplate(1, rating)}
-                {starsTemplate(2, rating)}
-                {starsTemplate(3, rating)}
-                {starsTemplate(4, rating)}
-                {starsTemplate(5, rating)}
+                {[1, 2, 3, 4, 5].map((index) => starsTemplate(index, rating))}
             </span>
             <span>
-                <a href='#' className={styles.comments}>{comments} отзывов</a>
+                <a href='/' className={styles.comments}>{comments} отзывов</a>
             </span>
         </div >
     )

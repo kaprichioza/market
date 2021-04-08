@@ -3,7 +3,7 @@ import React from 'react'
 
 export const UserAuth = () => {
     return (
-        <a className={styles.link}>
+        <a href="/" className={styles.link}>
             <img src="user.png" alt="icon profile"></img>
         </a>
     )

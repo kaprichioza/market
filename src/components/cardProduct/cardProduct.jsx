@@ -1,10 +1,9 @@
 import styles from './cardProduct.module.css';
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { ProductLogo } from '../productLogo/productLogo';
 import { Price } from '../price/price';
 import { DescriptionCardItem } from '../descriptionCardItem/descriptionCardItem';
 import { Rating } from '../rating/rating';
-import { addToCart } from '../../services/cartApi';
 import { Button } from '../button/button';
 import { CartContext } from '../../App';
 

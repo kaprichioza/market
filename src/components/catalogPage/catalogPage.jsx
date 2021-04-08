@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { CatalogContent } from '../catalogContent/catalogContent';
 import { Title } from '../title/title';
-import axios from 'axios';
 import { pluralize } from '../../utils/pluralize';
 import { Loader } from '../loader/loader';
-import { addToCart, getCatalog } from '../../services/cartApi';
+import { getCatalog } from '../../services/cartApi';
 
 export const CatalogPage = (props) => {    
     const [isLoading, setIsLoading] = useState(true)
