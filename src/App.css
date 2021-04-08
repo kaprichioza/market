@@ -53,6 +53,11 @@
 [disabled] {
   cursor: default !important;
 }
+[class*="summary_order-row"] .is-disabled {
+  color: #fff !important;
+  background-color: #005bff !important;
+  opacity: 0.5;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

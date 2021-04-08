@@ -11,6 +11,7 @@
     cursor: pointer;
     border: none;
     font-weight: bold;
+    transition: 0.75s;
 }
 .button:focus {
     outline: none;

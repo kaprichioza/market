@@ -6,6 +6,7 @@ import { Summary } from '../summary/summary';
 import { Loader } from '../loader/loader';
 import { getCatalog } from '../../services/cartApi';
 import { CartContext } from '../../App';
+import { pluralize } from '../../utils/pluralize';
 
 
 export const BasketPage = (props) => {
@@ -38,13 +39,15 @@ export const BasketPage = (props) => {
     }, [cartData])
     const selectedItems = basketData.filter(item => item.isSelected);
     const sum = selectedItems.reduce((accum, currentItem) => accum + currentItem.price, 0);
+    const quantityItems = basketData.length;
+    const descriptionText = `${quantityItems} ${pluralize(quantityItems, ['товар', 'товара', 'товаров'])}`;
     return (
         <>{isLoading
             ? <Loader />
             : <>
-                <Title title='Корзина' description={cartData && cartData.length} />
+                <Title title='Корзина' description={descriptionText} />
                 <OrderDetails onRemoveFromCart={props.onRemoveFromCart} onToggleAll={onToggleAll} onCartItemToggle={onCartItemToggle} cartItems={basketData} />
-                <Summary quantity={selectedItems.length} sum={sum} />
+                <Summary onOrderFromCart={props.onOrderFromCart} quantity={selectedItems.length} selectedItems={selectedItems} sum={sum} />
             </>}
         </>
     )

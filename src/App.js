@@ -4,7 +4,7 @@ import "./App.css";
 import { BasketPage } from './components/basketPage/basketPage';
 import { CatalogPage } from './components/catalogPage/catalogPage';
 import { Header } from "./components/header/header";
-import { addToCart, getCart, removeFromCart } from './services/cartApi';
+import { addToCart, getCart, orderFromCart, removeFromCart } from './services/cartApi';
 import { guid } from './utils/guid';
 export const cookieName = 'sessionToken';
 export const CartContext = React.createContext([]);
@@ -38,6 +38,18 @@ function App() {
       console.error(e)
     }
   }
+  async function onOrderFromCart(ids) {
+    try {
+      const responseCartItems = await orderFromCart(ids);
+      setCartData(responseCartItems.data);
+      if (responseCartItems.status === 200) {
+        console.log('order is complete');
+        window.location.href = '/';        
+      }
+    } catch (e) {
+      console.error(e)
+    }
+  }
   return (
     <CartContext.Provider value={cartData} >
       <Router>
@@ -47,7 +59,7 @@ function App() {
             <CatalogPage onAddToCart={onAddToCart} />
           </Route>
           <Route path="/basket">
-            <BasketPage onRemoveFromCart={onRemoveFromCart}/>
+            <BasketPage onRemoveFromCart={onRemoveFromCart} onOrderFromCart={onOrderFromCart} />
           </Route>
         </Switch>
       </Router>

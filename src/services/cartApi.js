@@ -13,3 +13,7 @@ export function removeFromCart(ids) {
     const body = ids.reduce((accum, id) => { accum[id] = 0; return accum }, {});
     return axios.post(`/api/v1/cart/update`, body)
 }
+export function orderFromCart(ids) {
+    const body = ids.reduce((accum, id) => { accum[id] = 0; return accum }, {});
+    return axios.post(`/api/v1/cart/update`, body)
+}
