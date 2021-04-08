@@ -17,3 +17,6 @@
     padding: 0 8px;
     z-index: 1;
 }
+.is-empty {
+    display: none;
+}

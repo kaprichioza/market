@@ -26,9 +26,6 @@ export const BasketPage = (props) => {
             }
         })()   
     }, [cartData])
-    // if (cartData) {
-    //     fetchProducts();
-    // } 
     const sum = basketData && basketData.reduce((accum, currentItem) => accum + currentItem.price, 0);
     return (
         <>{isLoading
