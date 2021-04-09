@@ -2,7 +2,7 @@
 
 Для запуска проекта необходимо выполнить следующие действия:
 
-- клонировать репозиторий: [https://github.com/kaprichioza/market.git](https://github.com/kaprichioza/market.git)
+- клонировать репозиторий: `git clone` [https://github.com/kaprichioza/market.git](https://github.com/kaprichioza/market.git)
 - перейти в папку репозитория
 - выполнить установку пакетов: `npm install`
 - запустить сервер: `npm run backend`
