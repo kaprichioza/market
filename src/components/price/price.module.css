@@ -1,32 +1,32 @@
 .price-wrap {
-    display: inline-flex;
-    align-items: center;
+  display: inline-flex;
+  align-items: center;
 }
 .product-price {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #001a34;
-    padding-right: 5px;
-    letter-spacing: -1px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #001a34;
+  padding-right: 5px;
+  letter-spacing: -1px;
 }
 .old-price {
-    display: none;
-    text-decoration-color: #f91155;
-    font-size: 12px;
-    line-height: 16px;
-    color: #001a34;
+  display: none;
+  text-decoration-color: #f91155;
+  font-size: 12px;
+  line-height: 16px;
+  color: #001a34;
 }
 @media screen and (max-width: 768px) {
-    .product-price {
-        font-size: 16px;
-        line-height: 20px;
-    }
-    .old-price {
-        font-size: 12px;
-        line-height: 16px;
-    }
-    [class*="summary_total-sum-row"] .price-wrap {
-        flex-direction: column-reverse;
-    }
+  .product-price {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .old-price {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  [class*='summary_total-sum-row'] .price-wrap {
+    flex-direction: column-reverse;
+  }
 }

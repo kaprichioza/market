@@ -1,68 +1,68 @@
 .wrapper {
-    max-width: 936px;
-    padding: 14px 44px;
-    margin: auto;
+  max-width: 936px;
+  padding: 14px 44px;
+  margin: auto;
 }
 .table {
-    max-width: 700px;
-    border: none;
-    width: 100%;
+  max-width: 700px;
+  border: none;
+  width: 100%;
 }
 .table-head {
-    background: #f2f3f5;
+  background: #f2f3f5;
 }
 .table-head th,
 .tbody td {
-    padding: 16px 0 16px 16px;
+  padding: 16px 0 16px 16px;
 }
 .table-head th:first-child,
 .tbody tr td:first-child {
-    padding-left: 24px;
+  padding-left: 24px;
 }
 .table-head th:last-child,
 .tbody tr td:last-child {
-    padding-right: 24px;
+  padding-right: 24px;
 }
 .tbody img {
-    object-fit: contain;
+  object-fit: contain;
 }
 .table-head button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .table-head button:focus {
-    outline: none;
+  outline: none;
 }
 .select-all-button {
-    font-size: 14px;
-    line-height: 18px;
-    color: #001a34;
+  font-size: 14px;
+  line-height: 18px;
+  color: #001a34;
 }
 .remove-button {
-    font-size: 14px;
-    line-height: 18px;
-    color: #f91155;
+  font-size: 14px;
+  line-height: 18px;
+  color: #f91155;
 }
 .tbody tr:not(:last-child) td {
-    border-bottom: 1px solid rgba(0, 26, 52, 0.163844);
+  border-bottom: 1px solid rgba(0, 26, 52, 0.163844);
 }
 @media screen and (max-width: 768px) {
-    .wrapper {
-        padding: 10px 16px;
-    }
-    .image {
-        display: none;
-    }
-    .table-head th,
-    .tbody td {
-        padding: 10px 0 10px 5px;
-    }
-    .tbody tr td:first-child {
-        padding-left: 14px;
-    }
-    .table-head th:last-child,
-    .tbody tr td:last-child {
-        padding-right: 14px;
-    }
+  .wrapper {
+    padding: 10px 16px;
+  }
+  .image {
+    display: none;
+  }
+  .table-head th,
+  .tbody td {
+    padding: 10px 0 10px 5px;
+  }
+  .tbody tr td:first-child {
+    padding-left: 14px;
+  }
+  .table-head th:last-child,
+  .tbody tr td:last-child {
+    padding-right: 14px;
+  }
 }

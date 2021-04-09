@@ -1,59 +1,59 @@
 .button {
-    color: #fff;
-    background-color: #005bff;
-    border-radius: 3px;
-    font-size: 14px;
-    line-height: 18px;
-    text-align: center;
-    padding: 7px 12px;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
-    transition: 0.75s;
+  color: #fff;
+  background-color: #005bff;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  padding: 7px 12px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  transition: 0.75s;
 }
 .button:hover {
-    background-color: #004ed6;
+  background-color: #004ed6;
 }
 .button:focus {
-    outline: none;
+  outline: none;
 }
 .order {
-    border-radius: 3px;
-    font-size: 16px;
-    line-height: 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-.button { 
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+.button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 }
 .button:after {
-    left: 0;
+  left: 0;
 }
 .button:after {
-    content: "";
-    background: #fff;
-    display: block;
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -5%;
-    border-radius: 50px;
-    margin-left: -30%;
-    opacity: 0;
-    transition: all 0.75s ease-in-out;
+  content: '';
+  background: #fff;
+  display: block;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -5%;
+  border-radius: 50px;
+  margin-left: -30%;
+  opacity: 0;
+  transition: all 0.75s ease-in-out;
 }
 .button:active:after {
-    width: 0px;
-    opacity: 1;
-    transition: 0s;
+  width: 0px;
+  opacity: 1;
+  transition: 0s;
 }
-@media screen and (max-width: 768px) { 
-    .order {
-        font-size: 14px;
-        height: 40px;
-    }    
+@media screen and (max-width: 768px) {
+  .order {
+    font-size: 14px;
+    height: 40px;
+  }
 }

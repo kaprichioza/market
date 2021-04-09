@@ -28,7 +28,7 @@
   color: #61dafb;
 }
 
-.is-sale [class*="discount-value"] {
+.is-sale [class*='discount-value'] {
   position: absolute;
   display: flex;
   bottom: 0;
@@ -40,10 +40,10 @@
   color: #fff;
   padding: 3px 6px;
 }
-.is-sale [class*="price_old-price"] {
+.is-sale [class*='price_old-price'] {
   display: block;
 }
-.is-sale [class*="product-price"] {
+.is-sale [class*='product-price'] {
   color: #f91155;
 }
 .is-disabled {
@@ -53,7 +53,7 @@
 [disabled] {
   cursor: default !important;
 }
-[class*="summary_order-row"] .is-disabled {
+[class*='summary_order-row'] .is-disabled {
   color: #fff !important;
   background-color: #005bff !important;
   opacity: 0.5;

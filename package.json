@@ -25,12 +25,12 @@
     "eject": "react-scripts eject",
     "backend": "node ./src/backend/server.js",
     "precommit": "lint-staged",
-    "prettier": "prettier --single-quote --use-tabs --trailing-comma es5 --write \"src/**/*.jsx\""
+    "prettier": "prettier --single-quote --use-tabs --trailing-comma es5 --write \"src/**/*.jsx\"",
+    "format": "prettier-standard --format"
   },
   "lint-staged": {
-    "src/**/js/*.js": [
-      "prettier --single-quote --use-tabs --trailing-comma es5 --write",
-      "git add"
+    "*": [
+      "prettier-standard --lint"
     ]
   },
   "eslintConfig": {
@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "prettier-standard": "^16.4.1"
   }
 }

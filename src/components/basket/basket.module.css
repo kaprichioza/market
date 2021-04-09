@@ -1,22 +1,22 @@
 .link {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 .link:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 .quantity-items {
-    position: absolute;
-    top: -8px;
-    right: -15px;
-    background: #f91155;
-    border-radius: 8px;
-    color: white;
-    font-size: 12px;
-    line-height: 16px;
-    padding: 0 8px;
-    z-index: 1;
+  position: absolute;
+  top: -8px;
+  right: -15px;
+  background: #f91155;
+  border-radius: 8px;
+  color: white;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0 8px;
+  z-index: 1;
 }
 .is-empty {
-    display: none;
+  display: none;
 }

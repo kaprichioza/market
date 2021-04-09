@@ -1,17 +1,17 @@
 .wrapper {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .rating {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 .comments {
-    font-size: 14px;
-    line-height: 18px;
-    color: #808d9a;
-    text-decoration: none;
-    transition: 0.5s;
+  font-size: 14px;
+  line-height: 18px;
+  color: #808d9a;
+  text-decoration: none;
+  transition: 0.5s;
 }
 .comments:hover {
-    color: #000;
+  color: #000;
 }

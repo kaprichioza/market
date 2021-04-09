@@ -1,78 +1,78 @@
 .wrapper {
-    max-width: 936px;
-    padding: 14px 44px;
-    margin: auto;
+  max-width: 936px;
+  padding: 14px 44px;
+  margin: auto;
 }
 .container {
-    background-color: #f2f3f5;
-    padding: 24px;
-    max-width: calc(700px - 48px);
+  background-color: #f2f3f5;
+  padding: 24px;
+  max-width: calc(700px - 48px);
 }
 .title-order,
 .total-sum-row {
-    font-size: 20px;
-    line-height: 26px;
-    padding-bottom: 16px;
+  font-size: 20px;
+  line-height: 26px;
+  padding-bottom: 16px;
 }
 .quantity-row,
 .discount-value,
 .order-row {
-    padding-bottom: 16px;
-    font-size: 16px;
-    line-height: 20px;
+  padding-bottom: 16px;
+  font-size: 16px;
+  line-height: 20px;
 }
 .discount-row {
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(0, 26, 52, 0.163844);
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 26, 52, 0.163844);
 }
 .total-sum-row {
-    padding-top: 16px;
-    padding-bottom: 30px;
-    align-items: center;    
+  padding-top: 16px;
+  padding-bottom: 30px;
+  align-items: center;
 }
 .container .order-row {
-    color: #808d9a;
+  color: #808d9a;
 }
 .quantity-row,
 .order-row,
 .discount-row,
 .total-sum-row {
-    display: flex;
-    justify-content: space-between;
-    color: #001a34;
+  display: flex;
+  justify-content: space-between;
+  color: #001a34;
 }
 .order-row {
-    align-items: center;
+  align-items: center;
 }
 .order-description {
-    flex-basis: 50%;
+  flex-basis: 50%;
 }
 .button-container {
-    height: 48px;
-    flex-basis: 40%;
+  height: 48px;
+  flex-basis: 40%;
 }
 @media screen and (max-width: 768px) {
-    .wrapper {
-        padding: 10px 16px;
-    }
-    .title-order,
-    .total-sum-row {
-        font-size: 16px;
-        line-height: 20px;
-        padding-bottom: 10px;
-    }
-    .quantity-row,
-    .discount-value,
-    .order-row {
-        padding-bottom: 10px;
-        font-size: 14px;
-        line-height: 20px;
-    }
-    .discount-row {
-        padding-bottom: 10px;
-    }
-    .total-sum-row {
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }        
+  .wrapper {
+    padding: 10px 16px;
+  }
+  .title-order,
+  .total-sum-row {
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 10px;
+  }
+  .quantity-row,
+  .discount-value,
+  .order-row {
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .discount-row {
+    padding-bottom: 10px;
+  }
+  .total-sum-row {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
 }
