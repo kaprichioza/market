@@ -6,10 +6,8 @@ const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync(path.join(__dirname, 'db', 'db.json'))
 const db = low(adapter)
+app.use(express.static(path.join(__dirname, '../../', 'build')));
 app.use(express.json())
-app.get('/', function (req, res) {
-  return res.send('ok')
-})
 app.use(cookieParser())
 app.get('/api/v1/products', function (req, res) {
   const productIds = req.query.ids
@@ -56,5 +54,8 @@ app.post('/api/v1/cart/add', function (req, res) {
   db.set(`cart[${token}]`, currentCartItems).write()
   return res.json(currentCartItems)
 })
+app.get('*', function (req, res) {  
+  res.sendFile(path.join(__dirname, '../../', 'build', 'index.html'));
+});
 
 app.listen(process.env.PORT || 8080)

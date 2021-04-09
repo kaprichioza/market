@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Basket } from '../basket/basket'
 import { MenuNavigation } from '../menuList/menuNavigation'
 import { UserAuth } from '../userAuth/userAuth'
@@ -8,9 +9,9 @@ export const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <a href='/' className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           <img src='logo.png' alt='ozon logo'></img>
-        </a>
+        </Link>
         <MenuNavigation />
         <div className={styles['user-navigation-link']}>
           <UserAuth />

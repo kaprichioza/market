@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './menuNavigation.module.css'
 
 export const MenuNavigation = () => {
@@ -6,16 +7,16 @@ export const MenuNavigation = () => {
     <nav className={styles.wrapper}>
       <ul className={styles.list}>
         <li className={`${styles.item} ${styles.active}`}>
-          <a href={'/'}>Каталог</a>
+          <Link to={'/'}>Каталог</Link>
         </li>
         <li className={styles.item}>
-          <a href={'/'}>доставка</a>
+          <Link to={'/'}>доставка</Link>
         </li>
         <li className={styles.item}>
-          <a href={'/'}>Оплата</a>
+          <Link to={'/'}>Оплата</Link>
         </li>
         <li className={styles.item}>
-          <a href={'/'}>Поддержка</a>
+          <Link to={'/'}>Поддержка</Link>
         </li>
       </ul>
     </nav>
