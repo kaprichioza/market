@@ -51,4 +51,18 @@
     .wrapper {
         padding: 10px 16px;
     }
+    .image {
+        display: none;
+    }
+    .table-head th,
+    .tbody td {
+        padding: 10px 0 10px 5px;
+    }
+    .tbody tr td:first-child {
+        padding-left: 14px;
+    }
+    .table-head th:last-child,
+    .tbody tr td:last-child {
+        padding-right: 14px;
+    }
 }

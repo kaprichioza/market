@@ -31,7 +31,7 @@ export const OrderDetails = (props) => {
                                 <input onChange={() => onCartItemToggle(id)} checked={isSelected} type="checkbox"></input>                               
                             </td>
                             <td>
-                                <img src={preview} height='80px' alt='preview item'></img>
+                                <img src={preview} className={styles.image} height='80px' alt='preview item'></img>
                             </td>
                             <td>
                                 <DescriptionCardItem text={description} />

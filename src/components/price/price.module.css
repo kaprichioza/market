@@ -17,3 +17,16 @@
     line-height: 16px;
     color: #001a34;
 }
+@media screen and (max-width: 768px) {
+    .product-price {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .old-price {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    [class*="summary_total-sum-row"] .price-wrap {
+        flex-direction: column-reverse;
+    }
+}

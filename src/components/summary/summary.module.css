@@ -28,6 +28,7 @@
 .total-sum-row {
     padding-top: 16px;
     padding-bottom: 30px;
+    align-items: center;    
 }
 .container .order-row {
     color: #808d9a;
@@ -39,6 +40,9 @@
     display: flex;
     justify-content: space-between;
     color: #001a34;
+}
+.order-row {
+    align-items: center;
 }
 .order-description {
     flex-basis: 50%;
