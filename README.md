@@ -1,5 +1,7 @@
 # market-demo
 
+[Посмотреть на heroku](https://mini-market-demo.herokuapp.com/)
+
 ### Для запуска проекта необходимо выполнить следующие действия:
 
 ### prod mode
@@ -7,7 +9,7 @@
 - перейти в папку репозитория
 - выполнить установку пакетов: `npm install`
 - чтобы запустить prod версию необходимо выполнить `npm run build`
-- запустить сервер: `npm run backend`
+- запустить сервер: `npm start`
 - открыть в браузере следующий адрес: [http://localhost:8080/](http://localhost:8080/)
 
 ---
@@ -16,8 +18,8 @@
 - клонировать репозиторий: `git clone` [https://github.com/kaprichioza/market.git](https://github.com/kaprichioza/market.git)
 - перейти в папку репозитория
 - выполнить установку пакетов: `npm install`
-- запустить сервер: `npm run backend`
-- запустить проект: открыть дополнителньый терминал и выполнить `npm start`
+- запустить сервер: `npm start`
+- запустить проект: открыть дополнителньый терминал и выполнить `npm run frontend`
 - открыть в браузере следующий адрес: [http://localhost:3000/](http://localhost:3000/)
 
 ## Available Scripts
